@@ -1,132 +1,93 @@
-// Create the entire site dynamically using JavaScript
 
-// ===== HEAD ELEMENTS =====
-document.title = "Stylize Labs | Minecraft Building Services";
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Stylize Labs | Minecraft Building Services</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/look.css" />
+</head>
+<body>
 
-const fontLink = document.createElement("link");
-fontLink.href = "https://fonts.googleapis.com/css?family=Raleway:600,900";
-fontLink.rel = "stylesheet";
-document.head.appendChild(fontLink);
+  <!-- ===== NAVBAR ===== -->
+  <div class="navbar">
+    <ul class="nav-links">
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Quotes</a></li>
+    </ul>
 
-const cssLink = document.createElement("link");
-cssLink.rel = "stylesheet";
-cssLink.href = "assets/css/look.css";
-document.head.appendChild(cssLink);
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png" alt="Stylize Labs Logo">
+      <div class="logo-text">
+        <span class="brand-name">BlockLegion Studios</span>
+        <span class="slogan">Crafting Worlds, Block by Block.</span>
+      </div>
+    </div>
+  </div>
 
-// ===== NAVBAR =====
-const navbar = document.createElement("div");
-navbar.className = "navbar";
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Crafting Worlds, Block by Block</h1>
+      <p>Bring your Minecraft visions to life with our skilled builders. Whether it’s grand castles, modern metropolises, or custom creations, we turn imagination into breathtaking worlds (change)</p>
+    </div>
+  </section>
 
-const navList = document.createElement("ul");
-navList.className = "nav-links";
-["Portfolio", "Services", "Reviews", "Quotes"].forEach(text => {
-  const li = document.createElement("li");
-  const a = document.createElement("a");
-  a.href = "#";
-  a.textContent = text;
-  li.appendChild(a);
-  navList.appendChild(li);
-});
-navbar.appendChild(navList);
+  <!-- ===== GALLERY SECTION ===== -->
+  <section class="gallery-section">
+    <p class="heading">Our Creations</p>
+    <div class="gallery-image">
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=444" alt="">
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Library</p>
+            <p class="opacity-low">Architect Design</p>
+          </div>
+        </div> 
+      </div>
 
-const logoContainer = document.createElement("div");
-logoContainer.className = "logo-container";
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250/?image=232" alt="">
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Night Sky</p>
+            <p class="opacity-low">Cinematic</p>
+          </div>
+        </div>
+      </div>
 
-const logoImg = document.createElement("img");
-logoImg.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png";
-logoImg.alt = "Stylize Labs Logo";
-logoContainer.appendChild(logoImg);
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250/?image=431" alt="">
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Tea Talk</p>
+            <p class="opacity-low">Composite</p>
+          </div>
+        </div>
+      </div>
 
-const logoText = document.createElement("div");
-logoText.className = "logo-text";
+      <div class="img-box">
+        <img src="https://picsum.photos/350/250?image=474" alt="">
+        <div class="transparent-box">
+          <div class="caption">
+            <p>Road</p>
+            <p class="opacity-low">Landscape</p>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
 
-const brandName = document.createElement("span");
-brandName.className = "brand-name";
-brandName.textContent = "BlockLegion Studios";
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    © 2025 <span>Stylize Labs</span> — Professional Minecraft Builds. All rights reserved.
+  </footer>
 
-const slogan = document.createElement("span");
-slogan.className = "slogan";
-slogan.textContent = "Crafting Worlds, Block by Block.";
+</body>
+</html>
 
-logoText.appendChild(brandName);
-logoText.appendChild(slogan);
-logoContainer.appendChild(logoText);
 
-navbar.appendChild(logoContainer);
-document.body.appendChild(navbar);
 
-// ===== HERO SECTION =====
-const heroSection = document.createElement("section");
-heroSection.className = "hero-section";
-
-const heroContent = document.createElement("div");
-heroContent.className = "hero-content";
-
-const heroTitle = document.createElement("h1");
-heroTitle.textContent = "Crafting Worlds, Block by Block";
-
-const heroText = document.createElement("p");
-heroText.textContent = "Bring your Minecraft visions to life with our skilled builders. Whether it’s grand castles, modern metropolises, or custom creations, we turn imagination into breathtaking worlds (change)";
-
-heroContent.appendChild(heroTitle);
-heroContent.appendChild(heroText);
-heroSection.appendChild(heroContent);
-document.body.appendChild(heroSection);
-
-// ===== GALLERY SECTION =====
-const gallerySection = document.createElement("section");
-gallerySection.className = "gallery-section";
-
-const galleryHeading = document.createElement("p");
-galleryHeading.className = "heading";
-galleryHeading.textContent = "Our Creations";
-gallerySection.appendChild(galleryHeading);
-
-const galleryContainer = document.createElement("div");
-galleryContainer.className = "gallery-image";
-
-const galleryImages = [
-  { src: "https://picsum.photos/350/250?image=444", title: "Library", desc: "Architect Design" },
-  { src: "https://picsum.photos/350/250/?image=232", title: "Night Sky", desc: "Cinematic" },
-  { src: "https://picsum.photos/350/250/?image=431", title: "Tea Talk", desc: "Composite" },
-  { src: "https://picsum.photos/350/250?image=474", title: "Road", desc: "Landscape" }
-];
-
-galleryImages.forEach(({ src, title, desc }) => {
-  const imgBox = document.createElement("div");
-  imgBox.className = "img-box";
-
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = title;
-  imgBox.appendChild(img);
-
-  const transparentBox = document.createElement("div");
-  transparentBox.className = "transparent-box";
-
-  const caption = document.createElement("div");
-  caption.className = "caption";
-
-  const captionTitle = document.createElement("p");
-  captionTitle.textContent = title;
-
-  const captionDesc = document.createElement("p");
-  captionDesc.className = "opacity-low";
-  captionDesc.textContent = desc;
-
-  caption.appendChild(captionTitle);
-  caption.appendChild(captionDesc);
-  transparentBox.appendChild(caption);
-  imgBox.appendChild(transparentBox);
-
-  galleryContainer.appendChild(imgBox);
-});
-
-gallerySection.appendChild(galleryContainer);
-document.body.appendChild(gallerySection);
-
-// ===== FOOTER =====
-const footer = document.createElement("footer");
-footer.className = "footer";
-footer.innerHTML = "© 2025 <span>Stylize Labs</span> — Professional Minecraft Builds. All rights reserved.";
-document.body.appendChild(footer);
