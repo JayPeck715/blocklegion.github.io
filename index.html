@@ -9,24 +9,31 @@
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
-  <div class="navbar">
-    <ul class="nav-links">
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Reviews</a></li>
-      <li><a href="#">Terms</a></li>
-      <li><a href="#">Get a Quote</a></li>
-    </ul>
 
-    <div class="logo-container">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png" alt="Stylize Labs Logo">
-      <div class="logo-text">
-        <span class="brand-name">BlockLegion Studios</span>
-        <span class="slogan">Crafting Worlds, Block by Block.</span>
-      </div>
+  <!-- ===== NAVBAR ===== -->
+<div class="navbar">
+  <div class="logo-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png" alt="BlockLegion Logo">
+    <div class="logo-text">
+      <span class="brand-name">BlockLegion Studios</span>
+      <span class="slogan">Crafting Worlds, Block by Block.</span>
     </div>
   </div>
+
+  <!-- Hamburger Icon -->
+  <div class="menu-toggle" id="menu-toggle">
+    &#9776;
+  </div>
+
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Reviews</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="#">Get a Quote</a></li>
+  </ul>
+</div>
+
 
   <!-- ===== HERO SECTION ===== -->
   <section class="hero-section">
@@ -87,9 +94,18 @@
     © 2025 <span>BlockLegion Studios</span> — Professional Minecraft Builds. All rights reserved.
   </footer>
 
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
+
 </body>
 </html>
-
 
 
 
