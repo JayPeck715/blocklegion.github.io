@@ -1,106 +1,121 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>BlockLegion Studios | Minecraft Building Services</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/look.css" />
-<link rel="stylesheet" href="assets/css/import_file_js.js" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-
-  <!-- ===== NAVBAR ===== -->
-<div class="navbar">
-  <div class="logo-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png" alt="BlockLegion Logo">
-    <div class="logo-text">
-      <span class="brand-name">BlockLegion Studios</span>
-      <span class="slogan">Crafting Worlds, Block by Block.</span>
+    <!-- ===== NAVBAR ===== -->
+  <div class="navbar">
+    <div class="logo-container">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Twemoji_1f600.svg/1200px-Twemoji_1f600.svg.png" alt="BlockLegion Logo">
+      <div class="logo-text">
+        <span class="brand-name">BlockLegion Studios</span>
+        <span class="slogan">Crafting Worlds, Block by Block.</span>
+      </div>
     </div>
+
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Reviews</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Get a Quote</a></li>
+    </ul>
   </div>
-
-  <!-- Hamburger Icon -->
-  <div class="menu-toggle" id="menu-toggle">
-    &#9776;
-  </div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="#">Services</a></li>
-    <li><a href="#">Reviews</a></li>
-    <li><a href="#">Terms</a></li>
-    <li><a href="#">Get a Quote</a></li>
-  </ul>
-</div>
-
 
   <!-- ===== HERO SECTION ===== -->
-  <section class="hero-section">
+  <section class="hero">
     <div class="hero-content">
-      <h1>Crafting Worlds, Block by Block</h1>
-      <p>We create every kind of Minecraft map you can imagine — from detailed 1k x 1k spawns to intense PvP arenas. Whatever world you envision, we’ll bring it to life, block by block.</p>
+      <h1>Professional Minecraft Builds</h1>
+      <p>Commission premium maps, spawns, terrains, and custom structures — designed with precision and creativity.</p>
+      <a class="cta" href="/portfolio">View Portfolio</a>
     </div>
+    <div class="hero-img"></div>
   </section>
 
-  <!-- ===== GALLERY SECTION ===== -->
-  <section class="gallery-section">
-    <p class="heading">Our Creations</p>
-    <div class="gallery-image">
-      <div class="img-box">
-        <img src="https://picsum.photos/350/250?image=444" alt="">
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Library</p>
-            <p class="opacity-low">Architect Design</p>
-          </div>
-        </div> 
+  <!-- ===== SERVICES SECTION ===== -->
+  <section class="services">
+    <h2>What We Offer</h2>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Custom Spawns</h3>
+        <p>High-quality 1k–5k spawns tailored for servers and events.</p>
       </div>
 
-      <div class="img-box">
-        <img src="https://picsum.photos/350/250/?image=232" alt="">
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Night Sky</p>
-            <p class="opacity-low">Cinematic</p>
-          </div>
-        </div>
+      <div class="service-card">
+        <h3>PvP Maps</h3>
+        <p>Arenas optimized for gameplay flow, balance, and visuals.</p>
       </div>
 
-      <div class="img-box">
-        <img src="https://picsum.photos/350/250/?image=431" alt="">
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Tea Talk</p>
-            <p class="opacity-low">Composite</p>
-          </div>
-        </div>
+      <div class="service-card">
+        <h3>Full Terrain Worlds</h3>
+        <p>Custom biomes, gradients, landscapes, and world layouts.</p>
       </div>
 
-      <div class="img-box">
-        <img src="https://picsum.photos/350/250?image=474" alt="">
-        <div class="transparent-box">
-          <div class="caption">
-            <p>Road</p>
-            <p class="opacity-low">Landscape</p>
-          </div>
-        </div> 
+      <div class="service-card">
+        <h3>Custom Structures</h3>
+        <p>Castles, villages, organics, dungeons, monuments, and more.</p>
       </div>
+
     </div>
   </section>
+  <!-- ===== Gallery ===== -->
+
+  <section class="services">
+    <h2>Our Portfolio (Click to expand)</h2>
+
+<div class="gallery">
+  <img src="https://i.imgur.com/8Km9tLL.jpg">
+  <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Portfolio 2">
+  <img src="https://i.imgur.com/dM7Thhn.jpg" alt="Portfolio 3">
+  <img src="https://i.imgur.com/oYiTqum.jpg" alt="Portfolio 4">
+</div>
+
+<div class="modal" id="imgModal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+<script>
+  // Get modal elements
+  const modal = document.getElementById('imgModal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.querySelector('.close');
+
+  // Add click events to images
+  document.querySelectorAll('.gallery img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+    });
+  });
+
+  // Close modal on click
+  closeBtn.onclick = () => { modal.style.display = 'none'; }
+  window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; }
+</script>
+
+<!-- Modal for expanded image -->
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    © 2025 <span>BlockLegion Studios</span> — Professional Minecraft Builds. All rights reserved.
+    © 2025 BlockLegion Studios — All rights reserved.
   </footer>
 
-
+  <script src="main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
